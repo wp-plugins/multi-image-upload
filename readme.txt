@@ -7,7 +7,7 @@ Tested up to: 3.7.1
 Stable tag: 1.0
 License: GPLv2 or later
 
-This plugin adds a meta box to upload multiple images for posts, pages.
+This plugin adds a meta box to upload multiple images for posts and pages.
 
 == Description ==
 
@@ -45,8 +45,8 @@ Use this plugin if you want to quickly add a feature to upload multiple images f
 
 == miu_get_images() ==
 
-The function can be called from any template file to get attached images for the page/post being viewed.
-It return an array of the attached image URL.
+This function can be called from any template file to get attached images for the page/post being viewed.
+It returns an array of the attached image URL.
 
 It take only one argument: 
 
