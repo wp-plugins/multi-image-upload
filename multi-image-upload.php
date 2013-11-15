@@ -170,7 +170,7 @@ class Multi_Image_Uploader
         // Use get_post_meta to retrieve an existing value from the database.
         $value = get_post_meta($post->ID, 'miu_images', true);
 
-        $metabox_content = '<div id="miu_images"></div><input type="button" onClick="addRow()" value="Add Image" />';
+        $metabox_content = '<div id="miu_images"></div><input type="button" onClick="addRow()" value="Add Image" class="button" />';
         echo $metabox_content;
 
         $images = unserialize($value);

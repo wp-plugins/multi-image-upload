@@ -44,7 +44,7 @@ function addRow(image_url){
     if(typeof(image_url)==='undefined') image_url = "";
     itemsCount+=1;
     var emptyRowTemplate = '<div id=row-'+itemsCount+'> <input style=\'width:70%\' id=img-'+itemsCount+' type=\'text\' name=\'miu_images['+itemsCount+']\' value=\''+image_url+'\' />'
-    +'<input type=\'button\' href=\'#\' class=\'Image_button\' id=\'Image_button-'+itemsCount+'\' value=\'Upload\'>'
-    +'<input class="miu-remove" type=\'button\' value=\'Remove\' id=\'remove-'+itemsCount+'\' /></div>';
+    +'<input type=\'button\' href=\'#\' class=\'Image_button button\' id=\'Image_button-'+itemsCount+'\' value=\'Upload\'>'
+    +'<input class="miu-remove button" type=\'button\' value=\'Remove\' id=\'remove-'+itemsCount+'\' /></div>';
     jQuery('#miu_images').append(emptyRowTemplate);
 }
