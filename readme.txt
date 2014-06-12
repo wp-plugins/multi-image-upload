@@ -53,7 +53,7 @@ It take only one argument:
 1. **post_id** (integer) to get images linked to a specific post
 
 `<?php 
-$images = miu_get_images($post_id); 
+$images = miu_get_images($post_id = null); 
 
 //Sample output
 Array

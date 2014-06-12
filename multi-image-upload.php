@@ -1,5 +1,4 @@
 <?php
-
 /*
   Plugin Name: Multi Image Uploader
   Plugin URI: http://tahiryasin.wordpress.com/plugins/multi-image-upload/
@@ -34,15 +33,20 @@ function call_Multi_Image_Uploader()
     new Multi_Image_Uploader();
 }
 
-
 /**
  * Get images attached to some post
  *
  * @param int $post_id
  * @return array
  */
-function miu_get_images($post_id)
+function miu_get_images($post_id=null)
 {
+    global $post; 
+    if ($post_id == null)
+    {
+        $post_id = $post->ID;
+    }
+    
     $value = get_post_meta($post_id, 'miu_images', true);
     $images = unserialize($value);
     $result = array();
@@ -79,7 +83,6 @@ class Multi_Image_Uploader
         add_action('add_meta_boxes', array($this, 'add_meta_box'));
         add_action('save_post', array($this, 'save'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
-        add_action('admin_print_footer_scripts', array($this, 'admin_print_footer_scripts'));
     }
 
     /**
@@ -148,7 +151,7 @@ class Multi_Image_Uploader
         $miu_images = array();
         foreach ($posted_images as $image_url)
         {
-            if(!empty ($image_url))
+            if (!empty($image_url))
                 $miu_images[] = esc_url_raw($image_url);
         }
 
@@ -194,4 +197,5 @@ class Multi_Image_Uploader
             return;
         wp_enqueue_script('miu_script', plugin_dir_url(__FILE__) . 'miu_script.js', array('jquery'));
     }
+
 }
