@@ -1,4 +1,5 @@
 <?php
+
 /*
   Plugin Name: Multi Image Uploader
   Plugin URI: http://tahiryasin.wordpress.com/plugins/multi-image-upload/
@@ -41,12 +42,12 @@ function call_Multi_Image_Uploader()
  */
 function miu_get_images($post_id=null)
 {
-    global $post; 
+    global $post;
     if ($post_id == null)
     {
         $post_id = $post->ID;
     }
-    
+
     $value = get_post_meta($post_id, 'miu_images', true);
     $images = unserialize($value);
     $result = array();
@@ -149,10 +150,13 @@ class Multi_Image_Uploader
         // Validate user input.
         $posted_images = $_POST['miu_images'];
         $miu_images = array();
-        foreach ($posted_images as $image_url)
+        if (!empty($posted_images))
         {
-            if (!empty($image_url))
-                $miu_images[] = esc_url_raw($image_url);
+            foreach ($posted_images as $image_url)
+            {
+                if (!empty($image_url))
+                    $miu_images[] = esc_url_raw($image_url);
+            }
         }
 
         // Update the miu_images meta field.

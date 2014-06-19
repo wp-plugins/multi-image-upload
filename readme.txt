@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: multi, image, upload, metabox
 Requires at least: 2.8
 Tested up to: 3.9.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 
 This plugin adds a meta box to upload multiple images for posts and pages.
