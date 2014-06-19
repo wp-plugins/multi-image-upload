@@ -42,6 +42,8 @@ Use this plugin if you want to quickly add a feature to upload multiple images f
 = 1.0 =
 * First stable release.
 
+= 1.1 =
+* Bug fixes
 
 == miu_get_images() ==
 
