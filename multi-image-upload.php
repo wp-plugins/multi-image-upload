@@ -5,7 +5,7 @@
   Plugin URI: http://tahiryasin.wordpress.com/plugins/multi-image-upload/
   Description: This plugin adds a meta box to upload multiple images for posts and pages.
   Author: Tahir Yasin
-  Version: 1.0
+  Version: 1.1
   Author URI: http://about.me/tahiryasin
  */
 
